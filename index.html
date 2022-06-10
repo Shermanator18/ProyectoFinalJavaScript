@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Calcular Precio de las Cuotas</title>
 </head>
 <body>
     <script src="app.js"></script>
+    <div class="container">
+        <form action="action_page.php">
+            <label for="fname">Ingrese Monto Total</label>
+            <input type="text" id="monTot" name="monTot" placeholder="Monto"required>
+            <label for="lname">Ingrese Cuotas</label>
+            <input type="text" id="coutoas" name="coutas" placeholder="Cantidad Cuotas"required>
+            <label for="subject">Ingrese Interes</label>
+            <input type="text" id="interes" name="interes" placeholder="Interes"required>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
 </body>
 </html>
