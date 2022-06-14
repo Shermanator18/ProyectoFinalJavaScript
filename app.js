@@ -11,9 +11,9 @@ let interes = Number(prompt("Ingrese interes a cobrar"));
 console.log(cuota(number,cantCuotas,interes));
  */
 function funcion() {
-    const total =   document.getElementById("monTot").value;
-    const cuotas = document.getElementById("cuotas").value;
-    const interes = document.getElementById("interes").value;
+    let total =   document.getElementById("monTot").value;
+    let cuotas = document.getElementById("cuotas").value;
+    let interes = document.getElementById("interes").value;
     if (total <2){
         alert("Error ingrese un total Valido");
         return;
