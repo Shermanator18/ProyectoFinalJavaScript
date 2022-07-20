@@ -17,7 +17,8 @@ function funcion() {
         interes = document.getElementById("interes").value = "";
         return;
     }
-    const arrayGeneral =[total,cuotas,interes];
+    const arrayGeneral =[total,cuotas,interes,0];
     let resultado = arrayGeneral[0] / arrayGeneral[1] + arrayGeneral[2]/arrayGeneral[1];
-    alert(resultado);
+    arrayGeneral[4]= resultado;
+    alert(arrayGeneral[4]);
 }
