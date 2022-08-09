@@ -8,18 +8,15 @@
             <title>Calcular Precio de las Cuotas</title>
     </head>
     <body>
-        <script src="app.js"></script>
-        <div class="container">
-            <form>
+            <form id= "formulario">
                 <label for="fname">Ingrese Monto Total</label>                    
-                <input type="text" id="monTot" name="monTot" placeholder="Monto"required>
+                <input type="text" placeholder="Monto"required>
                 <label for="lname">Ingrese Cuotas</label>
                 <input type="text" id="cuotas" name="coutas" placeholder="Cantidad Cuotas"required>
                 <label for="subject">Ingrese Interes</label>
                 <input type="text" id="interes" name="interes" placeholder="Interes"required>
-                <button type="button" onclick="funcion()">Enviar</button>
-                <button type="button" onclick="window.print(); return false;">Imprimir</button>
+                <input type="submit" value="Enviar">
             </form>
-        </div>
+        <script src="app.js"></script>
     </body>
 </html>
