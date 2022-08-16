@@ -8,15 +8,18 @@
             <title>Calcular Precio de las Cuotas</title>
     </head>
     <body>
-            <form id= "formulario">
+        <form id= "formulario">
                 <label for="fname">Ingrese Monto Total</label>                    
-                <input type="text" placeholder="Monto"required>
+                <input type="number" placeholder="Monto"required>
                 <label for="lname">Ingrese Cuotas</label>
-                <input type="text" id="cuotas" name="coutas" placeholder="Cantidad Cuotas"required>
-                <label for="subject">Ingrese Interes</label>
-                <input type="text" id="interes" name="interes" placeholder="Interes"required>
+                <input type="number" id="cuotas" name="coutas" placeholder="Cantidad Cuotas"required>
+                <label for="subject">Ingrese Interes Anual</label>
+                <input type="number" id="interes" name="interes" placeholder="Interes"required>
+                <label for="totalCuota" id="totcuota"></label><br>
+                <label for="toalpagado" id="total"></label>
                 <input type="submit" value="Enviar">
-            </form>
+                <input type="submit" onclick="window.print()" value="Imprimir Pantalla">
+        </form>
         <script src="app.js"></script>
     </body>
 </html>
