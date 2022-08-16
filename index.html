@@ -8,7 +8,16 @@
             <title>Calcular Precio de las Cuotas</title>
     </head>
     <body>
-        <form id= "formulario">
+        <form  id="formLogin"class="frm">  
+                <label>Username : </label>   
+                <input type="text" placeholder="Enter Username" name="username" class="inpt" required>  
+                <label>Password : </label>   
+                <input type="password" placeholder="Enter Password" name="password" class="inpt" required>  
+                <input type="submit" value="Enviar" class="bt"></input>   
+                <input type="checkbox" checked="checked" class="inpt"> Remember me <br>  
+                Forgot <a href="#"> password? </a>   
+        </form>     
+        <form  id="formulario"class="formularioPrestamo">
                 <label for="fname">Ingrese Monto Total</label>                    
                 <input type="number" placeholder="Monto"required>
                 <label for="lname">Ingrese Cuotas</label>
@@ -19,7 +28,7 @@
                 <label for="toalpagado" id="total"></label>
                 <input type="submit" value="Enviar">
                 <input type="submit" onclick="window.print()" value="Imprimir Pantalla">
-        </form>
+            </form>
         <script src="app.js"></script>
     </body>
 </html>
