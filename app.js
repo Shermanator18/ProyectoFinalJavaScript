@@ -56,5 +56,6 @@ function validarLogin(e){
     const usuario = { id: 1,  nombre: nomb, contra: pass };
     const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor) };
     guardarLocal("User", JSON.stringify(usuario));
+    document.getElementById("formLogin").style.display="none";
     document.getElementById("formulario").style.display="block";
 }
