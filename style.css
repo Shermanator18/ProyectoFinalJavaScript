@@ -28,7 +28,9 @@ div {
   background-color: #f2f2f2;
   padding: 20px;
 }
-
+.menu{
+  display: none;
+}
 .formularioPrestamo{
   display: none;
 }
@@ -78,4 +80,4 @@ div {
 .container {   
       padding: 25px;   
       background-color: lightblue;  
-}   
+} 

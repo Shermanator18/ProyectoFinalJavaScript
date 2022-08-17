@@ -36,12 +36,6 @@ function validarForm(e){
         arrResultados[2] = arrResultados[1] * arrayIngreso[1];
         /*Muestra resultados*/
         /*Traigo UserInfo**/
-        //Obtenemos el listado  almacenado
-        /* const almacenados = JSON.parse(localStorage.getItem("User"));
-        const usuarios = [];
-        for (const objeto of almacenados){
-            usuarios.push(new Usuariooo(objeto));
-        }*/
         let usuarioEnLS = JSON.stringify(localStorage.getItem("User"));
         alert("Hola "+usuarioEnLS[5]);
         document.getElementById('totcuota').innerHTML = 'El valor de cada Cuota es de: '+parseFloat(arrResultados[1]).toFixed(2);
@@ -58,3 +52,8 @@ function validarLogin(e){
     document.getElementById("formLogin").style.display="none";
     document.getElementById("formulario").style.display="block";
 }
+function IVA() {
+    alert(Funciona);
+}
+
+/* configurar boton calcular iva*/
