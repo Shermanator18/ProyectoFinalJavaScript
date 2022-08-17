@@ -42,9 +42,8 @@ function validarForm(e){
         for (const objeto of almacenados){
             usuarios.push(new Usuariooo(objeto));
         }*/
-        let usuario;
         let usuarioEnLS = JSON.stringify(localStorage.getItem("User"));
-        alert("Hola "+usuarioEnLS);
+        alert("Hola "+usuarioEnLS[5]);
         document.getElementById('totcuota').innerHTML = 'El valor de cada Cuota es de: '+parseFloat(arrResultados[1]).toFixed(2);
         document.getElementById('total').innerHTML = 'El valor total a pagar es de: '+parseFloat(arrResultados[2]).toFixed(2);
     }
