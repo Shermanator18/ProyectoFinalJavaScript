@@ -26,7 +26,24 @@
                 <label for="toalpagado" id="total"></label>
                 <input type="submit" value="Enviar">
                 <input type="submit" onclick="window.print()" value="Imprimir Pantalla">
-            </form>
+                <input type="submit" value="IVA" onclick="IVA()">
+        </form>
+        <form  id="formIVA"class="formularioIVA">
+            <label for="fname">Ingrese Monto Total</label>                    
+            <input type="number" placeholder="Monto"required>
+            <label for="lname">Elija Porcentaje</label>
+            <input name="intereses" type="radio" value="21" checked="checked" />21
+            <input name="intereses" type="radio" value="10.5" />10.5
+            <input name="intereses" type="radio" value="27"  />27 <br>
+            <label for="subject">El total Incluye IVA</label><br>
+            <input name="incluye" type="checkbox" />Incluye
+            <label for="totaliva" id="total"></label><br>
+            <label for="iva" id="ivaaa"></label><br>
+            <label for="totSiva" id="totSinIva"></label><br>
+            <input type="submit" value="Enviar Iva">
+            <input type="submit" onclick="window.print()" value="Imprimir Pantalla">
+        </form>
+        <script  src="luxon.min.js"></script>
         <script src="app.js"></script>
     </body>
 </html>

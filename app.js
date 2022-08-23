@@ -8,12 +8,21 @@ let miform = document.getElementById("formulario");
 miform.addEventListener("submit", validarForm);
 let frmlogin = document.getElementById("formLogin");    
 frmlogin.addEventListener("submit" , validarLogin);
+let formIva = document.getElementById("formIVA");
+formIva.addEventListener("submit",validarIVA);
+function validarIVA(e){
+    e.preventDefault();
+    let formul = e.target;
+    let montotoal = formul.children[1].value;
+    alert(montotoal);
+}
 function validarForm(e){
         e.preventDefault();
         let formulario = e.target;
         let total =  formulario.children[1].value;
         let cuotas =  formulario.children[3].value;
         let interes =  formulario.children[5].value;
+        alert(today);
         if (total <2){
             alert("Error ingrese un total Valido");
             return;
@@ -52,8 +61,8 @@ function validarLogin(e){
     document.getElementById("formLogin").style.display="none";
     document.getElementById("formulario").style.display="block";
 }
-function IVA() {
-    alert(Funciona);
+function IVA(){
+    document.getElementById("formIVA").style.display="block";
+    document.getElementById("formulario").style.display="none";
+    validarIVA();
 }
-
-/* configurar boton calcular iva*/
