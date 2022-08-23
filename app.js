@@ -10,11 +10,60 @@ let frmlogin = document.getElementById("formLogin");
 frmlogin.addEventListener("submit" , validarLogin);
 let formIva = document.getElementById("formIVA");
 formIva.addEventListener("submit",validarIVA);
+let DateTime = luxon.DateTime;
 function validarIVA(e){
     e.preventDefault();
     let formul = e.target;
-    let montotoal = formul.children[1].value;
-    alert(montotoal);
+    let total =  formul.children[1].value;
+    if(document.getElementById("21").checked && document.getElementById("incluye").checked){
+        document.getElementById("tot").innerHTML = "El total es "+total;
+        let totSiva = total - (total*0.21);
+        let iva = total*0.21;
+        document.getElementById("ivaaa").innerHTML = "El iva es "+iva;
+        document.getElementById("totSinIva").innerHTML ="El total sin iva es de "+totSiva;
+        return;
+    }
+    if(document.getElementById("10").checked && document.getElementById("incluye").checked){
+        document.getElementById("total").innerHTML = "El total es "+total;
+        let totSiva = total - (total*0.105);
+        let iva = total*0.105;
+        document.getElementById("ivaaa").innerHTML = "El iva es "+iva;
+        document.getElementById("totSinIva").innerHTML ="El total sin iva es de "+totSiva;
+        return;
+    }
+    if(document.getElementById("27").checked && document.getElementById("incluye").checked){
+        document.getElementById("tot").innerHTML = "El total es "+total;
+        let totSiva = total - (total*0.27);
+        let iva = total*0.27;
+        document.getElementById("ivaaa").innerHTML = "El iva es "+iva;
+        document.getElementById("totSinIva").innerHTML ="El total sin iva es de "+totSiva;
+        return;
+    }
+    if(document.getElementById("21").checked){
+        let iva = total*0.21;
+        let totCiva = total + (total*0.21);
+        document.getElementById("tot").innerHTML = "El total es "+totCiva;
+        
+        document.getElementById("ivaaa").innerHTML = "El iva es "+iva;
+        document.getElementById("totSinIva").innerHTML ="El total sin iva es de "+total;
+    }
+    if(document.getElementById("10").checked){
+        let totCiva = total + (total*0.105);
+        document.getElementById("tot").innerHTML = "El total es "+totCiva;
+        let iva = total*0.105;
+        document.getElementById("ivaaa").innerHTML = "El iva es "+iva;
+        document.getElementById("totSinIva").innerHTML ="El total sin iva es de "+total;
+    }
+    if(document.getElementById("27").checked){
+        let totCiva = total + (total*0.27);
+        document.getElementById("tot").innerHTML = "El total es "+totCiva;
+        let iva = total*0.27;
+        document.getElementById("ivaaa").innerHTML = "El iva es "+iva;
+        document.getElementById("totSinIva").innerHTML ="El total sin iva es de "+total;
+    }
+    let usuarioEnLS = JSON.stringify(localStorage.getItem("User"));
+        let dia = DateTime.now().toLocaleString()	
+        alert("Hola "+usuarioEnLS[5]+" hoy es: "+dia);
 }
 function validarForm(e){
         e.preventDefault();
@@ -22,7 +71,6 @@ function validarForm(e){
         let total =  formulario.children[1].value;
         let cuotas =  formulario.children[3].value;
         let interes =  formulario.children[5].value;
-        alert(today);
         if (total <2){
             alert("Error ingrese un total Valido");
             return;
@@ -46,7 +94,8 @@ function validarForm(e){
         /*Muestra resultados*/
         /*Traigo UserInfo**/
         let usuarioEnLS = JSON.stringify(localStorage.getItem("User"));
-        alert("Hola "+usuarioEnLS[5]);
+        let dia = DateTime.now().toLocaleString()	
+        alert("Hola "+usuarioEnLS[5]+" hoy es: "+dia);
         document.getElementById('totcuota').innerHTML = 'El valor de cada Cuota es de: '+parseFloat(arrResultados[1]).toFixed(2);
         document.getElementById('total').innerHTML = 'El valor total a pagar es de: '+parseFloat(arrResultados[2]).toFixed(2);
     }
