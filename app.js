@@ -98,6 +98,13 @@ function validarForm(e){
         alert("Hola "+usuarioEnLS[5]+" hoy es: "+dia);
         document.getElementById('totcuota').innerHTML = 'El valor de cada Cuota es de: '+parseFloat(arrResultados[1]).toFixed(2);
         document.getElementById('total').innerHTML = 'El valor total a pagar es de: '+parseFloat(arrResultados[2]).toFixed(2);
+        /*Probando fetch*/
+        fetch("https://jsonplaceholder.typicode.com/posts")
+        .then((resp)=> resp.json())
+        .then((data) =>{
+            console.log(data[0].title)
+            console.log(data[0].body)
+        })
     }
 function validarLogin(e){
     e.preventDefault();
