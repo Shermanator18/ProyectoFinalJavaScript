@@ -50,6 +50,9 @@ div {
 .formularioIVA{
   display: none;
 }
+.formDl{
+  display: none;
+}
 
 
 /*************************************************** CSS LOGIN/*/
@@ -97,3 +100,19 @@ div {
       padding: 25px;   
       background-color: lightblue;  
 } 
+/*DolarCSS*/
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 80px 200px;
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}

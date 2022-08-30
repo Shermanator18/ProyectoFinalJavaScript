@@ -25,6 +25,7 @@
                 <label for="totalCuota" id="totcuota"></label><br>
                 <label for="toalpagado" id="total"></label>
                 <input type="submit" value="Enviar">
+                <button onclick="DOLAR()">Dolar</button>
                 <button onclick="window.print()">Imprimir Pantalla</button>
                 <button onclick="IVA()">IVA</button>
         </form>
@@ -42,6 +43,24 @@
             <label for="totSiva" id="totSinIva"></label><br>
             <input type="submit" value="Calcular Iva">
             <button onclick="window.print()">Imprimir Pantalla</button>
+        </form>
+        <form id="formDolar" class="formDl">
+            <label for="Horario" id="HoraDia"></label> 
+            <div class="grid-container">
+                <div>Dolar Oficial</div>
+                <div>Dolar Blue</div>
+                <div>Euro Oficial</div> 
+                <div>
+                    <label for="dl" id="DlOf"></label>
+                </div>
+                <div>
+                    <label for="dlB" id="DlBl"></label>
+                </div>
+                <div>
+                    <label for="Eu" id="Eu"></label>
+                </div>  
+            </div>
+        <button onclick="window.print()">Imprimir Pantalla</button>
         </form>
         <script  src="luxon.min.js"></script>
         <script src="app.js"></script>

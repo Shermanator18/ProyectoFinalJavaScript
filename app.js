@@ -98,13 +98,6 @@ function validarForm(e){
         alert("Hola "+usuarioEnLS[5]+" hoy es: "+dia);
         document.getElementById('totcuota').innerHTML = 'El valor de cada Cuota es de: '+parseFloat(arrResultados[1]).toFixed(2);
         document.getElementById('total').innerHTML = 'El valor total a pagar es de: '+parseFloat(arrResultados[2]).toFixed(2);
-        /*Probando fetch*/
-        fetch("https://jsonplaceholder.typicode.com/posts")
-        .then((resp)=> resp.json())
-        .then((data) =>{
-            console.log(data[0].title)
-            console.log(data[0].body)
-        })
     }
 function validarLogin(e){
     e.preventDefault();
@@ -121,4 +114,17 @@ function IVA(){
     document.getElementById("formIVA").style.display="block";
     document.getElementById("formulario").style.display="none";
     validarIVA();
+}
+function DOLAR(){
+    document.getElementById("formDolar").style.display="block";
+    document.getElementById("formulario").style.display="none";
+    let dia = DateTime.now().toLocaleString();
+    document.getElementById("HoraDia").innerHTML = dia
+    fetch("https://api.bluelytics.com.ar/v2/latest")
+    .then((resp)=> resp.json())
+    .then((data) =>{
+        document.getElementById("DlOf").innerHTML = "El valor de venta es de " +data.oficial.value_sell
+        document.getElementById("DlBl").innerHTML = "El valor de venta es de " + data.blue.value_sell
+        document.getElementById("Eu").innerHTML = "El valor de venta es de " + data.oficial_euro.value_sell
+    })
 }
