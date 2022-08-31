@@ -64,6 +64,7 @@ function validarIVA(e){
     let usuarioEnLS = JSON.stringify(localStorage.getItem("User"));
         let dia = DateTime.now().toLocaleString()	
         alert("Hola "+usuarioEnLS[5]+" hoy es: "+dia);
+    document.getElementById("PrintIva").style.display="block";    
 }
 function validarForm(e){
         e.preventDefault();
@@ -98,6 +99,7 @@ function validarForm(e){
         alert("Hola "+usuarioEnLS[5]+" hoy es: "+dia);
         document.getElementById('totcuota').innerHTML = 'El valor de cada Cuota es de: '+parseFloat(arrResultados[1]).toFixed(2);
         document.getElementById('total').innerHTML = 'El valor total a pagar es de: '+parseFloat(arrResultados[2]).toFixed(2);
+        document.getElementById("PrintPrestamo").style.display="block";
     }
 function validarLogin(e){
     e.preventDefault();

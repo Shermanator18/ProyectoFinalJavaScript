@@ -53,13 +53,18 @@ div {
 .formDl{
   display: none;
 }
+.Print{
+  display: none;
+
+} 
 
 
 /*************************************************** CSS LOGIN/*/
 .bodyLogin {  
   font-family: Calibri, Helvetica, sans-serif;  
   background-color: pink;  
-}  
+}
+  
 .bt {   
       background-color: #4CAF50;   
       width: 100%;  
@@ -68,7 +73,8 @@ div {
         margin: 10px 0px;   
         border: none;   
         cursor: pointer;   
-}   
+}
+  
 .frm {   
         border: 3px solid #f1f1f1;   
 }   
